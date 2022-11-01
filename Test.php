@@ -1,10 +1,12 @@
 #Test Repoto initialise project
 
-<<<<<<< HEAD
-=======
 x = "Testing pushes and pulls"
 
 y = "Test variable"
->>>>>>> 3901cc792e5f718fda4c7907741406976d9e5a0c
 
+<<<<<<< HEAD
 // It's me Raheeb testing the push and pull into repo
+=======
+// It's me Raheeb testing the push and pull
+// Its me ikram
+>>>>>>> 998a83e41c3890ea0e3c1fc42aa8ffbd9093c9fa
