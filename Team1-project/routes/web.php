@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -61,4 +62,6 @@ Route::get('/dashboard', [AdminController::class, 'show_total']);
 
 Route::get('/products', [ProductController::class, 'getIndex']);
 
-Route::get('/addToCart/{id}', [ProductController::class, 'addToCart']);
+Route::post('/addToCart/{id}', [ProductController::class, 'addToCart']);
+
+Route::get('/showCart', [ProductController::class, 'showCart']);
