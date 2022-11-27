@@ -24,8 +24,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['middleware'=>['auth','is_Admin']],function(){
-    Route::get('/dashboard',function(){
+Route::group(['middleware' => ['auth', 'is_Admin']], function () {
+    Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
 });
@@ -53,16 +53,12 @@ Route::get('/admin.adminAccount', function () {
     return view('admin.adminAccount');
 });
 
-Route::get('admin.users',[AdminController::class,'viewUsers']);
+Route::get('admin.users', [AdminController::class, 'viewUsers']);
 
-Route::get('delete_user/{id}',[AdminController::class,'delete_user']);
+Route::get('delete_user/{id}', [AdminController::class, 'delete_user']);
 
-Route::get('/dashboard',[AdminController::class,'show_total']);
+Route::get('/dashboard', [AdminController::class, 'show_total']);
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', [ProductController::class, 'getIndex']);
 
-
-
-
+Route::get('/addToCart/{id}', [ProductController::class, 'addToCart']);
