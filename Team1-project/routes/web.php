@@ -63,6 +63,11 @@ Route::get('/products', function () {
     return view('products');
 });
 
+Route::get('/email', function () {
+    return view('email');
+});
 
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
 
 
