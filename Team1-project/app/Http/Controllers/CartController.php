@@ -18,7 +18,7 @@ class CartController extends Controller
             $product = product::find($id);
             $cart = new cart;
 
-            $cart->user_id = $user->id;
+            $cart->userid = $user->id;
             $cart->name = $user->name;
             $cart->phone = $user->phone;
             $cart->address = $user->address;
@@ -57,7 +57,7 @@ class CartController extends Controller
 
         if(Auth::id()){
             $id=Auth::user()->id;
-            $cart=cart::where('user_id', '=', $id)->get();
+            $cart=cart::where('userid', '=', $id)->get();
             return view('cart', compact('cart'));  
             
         } else {
