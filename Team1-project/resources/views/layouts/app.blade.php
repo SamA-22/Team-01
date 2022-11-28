@@ -24,6 +24,11 @@
     <!--Icons that have been used in the website (https://fontawesome.com/)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/fbb2a87a39.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3eb214850d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+
+
 
 </head>
 
@@ -40,11 +45,13 @@
                 <a href="{{ asset('/products') }}">Shop</a>
                 <a href="sizechart.html">Size Chart</a>
                 <a href="contact.html">Contact</a>
+                <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"> </a>
 
                 <div class="dropdown">
                     <button class="dropbtn">
                         <i class='fas fa-user-circle'></i>
+
                     </button>
                     <div class="dropdown-content">
                         <a href="{{ route('login') }}">Sign In</a>
@@ -52,6 +59,7 @@
 
                     </div>
                 </div>
+                
 
             </nav>
         </header>
