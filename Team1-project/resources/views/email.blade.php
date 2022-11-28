@@ -1,29 +1,18 @@
 @extends('layouts.app2')
 
-
 @section('content')
-<br><br>
-    @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
-<br><br><br><br><br><br>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Contact Us Page</title>
-        <link href="https://fonts.googleapis.com/css?family=Playfair%20Display:300,400,500,700" rel="stylesheet">
-        <link href="{{ asset('assets/css/contactUs.css') }}" rel="stylesheet" type="text/css">
-    </head>
-    <body>
+
         <div class="main">
             <div class="leftSection">
                 <div class="logo">
-                    <img src="images/logo.png" alt="HDC Logo" width="250" height="250">
+                    <img src="{{ asset('images/logo.png') }}" alt="HDC Logo" width="250" height="250">
                 </div>
                 <h1>Contact Us</h1>
                 <p>Whether to ask a question or to give us feedback, feel free to contact us and we will be sure to handle any concerns you may have. This will automatically send an email to hdc.retail@gmail.com, you can also chose to email us directly.</p>
+                <div class="buttons">
+                    <a class="btn" href="homePage.php">Home Page</a>
+                    <a class="btn" href="profilePage.php">Profile Page</a>
+                </div>
             </div>
             <form action="{{ route('send.email') }}" class="contact100-form validate-form" method="post" id="contactUs-form">
                 @csrf
@@ -35,7 +24,7 @@
                 {{ session()->get('message') }}
                 </div>
                 @endif
-                
+
                 <div class="info">
                     <div class="wrap-input100 validate-input" data-validate = "Name is required">
                         <input class="input100" type="text" name="name" placeholder="Name">
@@ -94,7 +83,6 @@
                 </script>
             </form>
         </div>
-    </body>
-</html>
 
-@endsection
+
+        @endsection
