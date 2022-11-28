@@ -77,6 +77,11 @@ Route::get('/dashboard',[AdminController::class,'show_total']);
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+Route::get('/email', function () {
+    return view('email');
+});
 
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
 
 
