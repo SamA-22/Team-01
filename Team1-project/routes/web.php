@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -62,6 +64,14 @@ Route::get('/dashboard', [AdminController::class, 'show_total']);
 
 Route::get('/products', [ProductController::class, 'getIndex']);
 
-Route::post('/addToCart/{id}', [ProductController::class, 'addToCart']);
+Route::post('/addToCart/{id}', [CartController::class, 'addToCart']);
 
-Route::get('/showCart', [ProductController::class, 'showCart']);
+Route::get('/showCart', [CartController::class, 'showCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+
+
+

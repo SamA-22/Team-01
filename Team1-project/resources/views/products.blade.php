@@ -28,9 +28,9 @@
             
             @csrf
 
-            <input type="number" value="1" min="1" class="form-control" style="width: 100px" name="quantity">
+            <input type="number" value="1" min="1" class="form-control" style="width: 50px; text-align:center" name="quantity">
             
-            <br>
+            </br>
 
             <input type="submit" class="btn btn-primary" value="Add to cart">
 
