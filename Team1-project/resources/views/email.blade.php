@@ -1,3 +1,14 @@
+@extends('layouts.app2')
+
+
+@section('content')
+<br><br>
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
+<br><br><br><br><br><br>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,10 +24,6 @@
                 </div>
                 <h1>Contact Us</h1>
                 <p>Whether to ask a question or to give us feedback, feel free to contact us and we will be sure to handle any concerns you may have. This will automatically send an email to hdc.retail@gmail.com, you can also chose to email us directly.</p>
-                <div class="buttons">
-                    <a class="btn" href="homePage.php">Home Page</a>
-                    <a class="btn" href="profilePage.php">Profile Page</a>
-                </div>
             </div>
             <form action="{{ route('send.email') }}" class="contact100-form validate-form" method="post" id="contactUs-form">
                 @csrf
@@ -89,3 +96,5 @@
         </div>
     </body>
 </html>
+
+@endsection
