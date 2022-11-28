@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ "High Definition Clothing"}}</title>
 
+
+    <!--The icon/favicon  of the website-->
+    <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="image/x-icon" />
+
     <!-----------------------Style---------------------->
     <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
 

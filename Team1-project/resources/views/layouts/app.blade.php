@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="image/x-icon" />
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--title of the website-->
     <title>{{ 'High Definition Clothing' }}</title>
+
+    <!--The icon/favicon  of the website-->
+    <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="image/x-icon" />
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
     <!--NavBar-------------------->
     <!-- <div class="topnav">-->
     @guest
@@ -38,7 +37,7 @@
 
             <nav class="navigation">
                 <a href="{{ asset('') }}">Home</a>
-                <a href="{{ asset('products') }}">Shop</a>
+                <a href="{{ asset('/products') }}">Shop</a>
                 <a href="sizechart.html">Size Chart</a>
                 <a href="contact.html">Contact</a>
                 <a href="#"> </a>
