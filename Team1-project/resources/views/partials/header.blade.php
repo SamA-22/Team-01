@@ -29,13 +29,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-------------------------------Cart icon-------------------------------------->
-            <div class="cart">
-                <i class="far fa-shopping-cart"></i>
-                <li>Cart</li>
-            </div>
-        </div>
 
         <!-----------------------Space between navBar and content---------------------->
         <div class="clearfix"></div>
@@ -52,7 +45,7 @@
 
         </div>
     @endif
-    
+
 @if(session()->has('message'))
     <div class ="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">x</button>

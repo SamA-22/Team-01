@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 
 @section('content')
@@ -35,7 +35,7 @@
                 {{ session()->get('message') }}
                 </div>
                 @endif
-                
+
                 <div class="info">
                     <div class="wrap-input100 validate-input" data-validate = "Name is required">
                         <input class="input100" type="text" name="name" placeholder="Name">

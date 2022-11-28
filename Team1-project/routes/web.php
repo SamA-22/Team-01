@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,8 +28,6 @@ Auth::routes();
 //Route to user account page
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route for the products page
-Route::get('/products',[ProductsController::class,'index']);
 
 ///////////////////////////////////////////(Admin Routes)/////////////////////////////////////////////////////////////////////
 Route::group(['middleware'=>['auth','is_Admin']],function(){
@@ -75,7 +75,7 @@ Route::get('/dashboard',[AdminController::class,'show_total']);
 
 
 });
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Email//////////////////////////////////////////////////////
 
 Route::get('/email', function () {
     return view('email');
@@ -85,3 +85,13 @@ Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
 
 
+////////////////////////////Shopping Cart////////////////////////////////////////////
+Route::get('/products', [ProductsController::class, 'getIndex']);
+
+Route::post('/addToCart/{id}', [CartController::class, 'addToCart']);
+
+Route::get('/showCart', [CartController::class, 'showCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);

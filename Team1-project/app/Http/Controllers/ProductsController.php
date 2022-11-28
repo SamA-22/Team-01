@@ -12,12 +12,14 @@ use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
-    //A function to view the products page
-    public function index(){
-        return view ('products');
+    //A function to view all the products
+    public function getIndex()
+    {
+        $products = Product::all();
+        return view('products', ['products' => $products]);
     }
 
-    //A function to view all the products
+    //A function to view all the products in the admin panel
     public function viewInventory(){
         $data=Product::all();
         return view('admin.viewProducts',compact('data'));
@@ -31,19 +33,19 @@ class ProductsController extends Controller
     //A function to add a new product
     public function add(Request $request){
         $product=new Product();
-        if ($request->hasfile('image')){
-         $file=$request->file('image');
+        if ($request->hasfile('imagePath')){
+         $file=$request->file('imagePath');
          $ext=$file->getClientOriginalExtension();
          $filename=time().'.'.$ext;
          $file->move('images/', $filename);
-         $product->image=$filename;
+         $product->imagePath=$filename;
      }
-         $product->name=$request->input('name');
+         $product->Name=$request->input('Name');
          $product->description=$request->input('description');
-         $product->size=$request->input('size');
-         $product->colour=$request->input('colour');
-         $product->prize=$request->input('prize');
-         $product->image=$request->input('image');
+         $product->Size=$request->input('Size');
+         $product->Colour=$request->input('Colour');
+         $product->price=$request->input('price');
+         $product->imagePath=$request->input('imagePath');
          $product->save();
        return redirect('addProducts')->with('status',"Product Added Successfully");
     }
@@ -59,24 +61,24 @@ class ProductsController extends Controller
     //A function to edit and update a product
     public function update(Request $request, $id){
         $product = Product::find($id);
-        if ($request->hasfile('image')){
+        if ($request->hasfile('imagePath')){
             $path='images/'.$product->image;
 
         if(File::exists($path)){
             File::delete($path);
         }
-         $file=$request->file('image');
+         $file=$request->file('imagePath');
          $ext=$file->getClientOriginalExtension();
          $filename=time().'.'.$ext;
          $file->move('images/', $filename);
-         $product->image=$filename;
+         $product->imagePath=$filename;
      }
-         $product->name=$request->input('name');
+         $product->Name=$request->input('Name');
          $product->description=$request->input('description');
-         $product->size=$request->input('size');
-         $product->colour=$request->input('colour');
-         $product->prize=$request->input('prize');
-         $product->image=$request->input('image');
+         $product->Size=$request->input('Size');
+         $product->Colour=$request->input('Colour');
+         $product->price=$request->input('price');
+         $product->imagePath=$request->input('imagePath');
          $product->update();
        return redirect('viewProducts')->with('status',"Product Updated Successfully");
     }
