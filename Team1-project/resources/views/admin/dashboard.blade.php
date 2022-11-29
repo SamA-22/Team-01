@@ -44,9 +44,9 @@
                     @foreach ($top as $top)
                         <tr>
                             <td>{{ $top->id }}</td>
-                            <td>{{ $top->name }}</td>
-                            <td>{{ $top->prize }}</td>
-                            <td>{{ $top->colour }}</td>
+                            <td>{{ $top->Name }}</td>
+                            <td>{{ $top->price }}</td>
+                            <td>{{ $top->Colour }}</td>
                         </tr>
                     @endforeach
 
@@ -56,5 +56,5 @@
         </div>
     </div>
 
-   
+
 @endsection

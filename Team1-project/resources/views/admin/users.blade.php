@@ -5,7 +5,7 @@
         <div class="content-table">
             <div class="table-box">
                 <div class="content-box">
-                    <p>Customer</p>
+                    <p>Customers</p>
                     <br />
                     <table>
 

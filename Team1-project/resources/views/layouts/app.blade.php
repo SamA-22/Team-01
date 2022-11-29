@@ -27,14 +27,10 @@
     <script src="https://kit.fontawesome.com/3eb214850d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
-
-
-
 </head>
 
 <body>
-    <!--NavBar-------------------->
-    <!-- <div class="topnav">-->
+                        <!------------------NavBar-------------------->
     @guest
         <header id="main-header">
             <a > <img id="logo" src="{{ URL::asset('/images/HDCwhite.png') }}" alt="HDC-logo"
@@ -44,7 +40,7 @@
                 <a href="{{ asset('') }}">Home</a>
                 <a href="{{ asset('/products') }}">Shop</a>
                 <a href="sizechart.html">Size Chart</a>
-                <a href="contact.html">Contact</a>
+                <a href="{{ asset('email') }}">Contact</a>
                 <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"> </a>
 
@@ -59,7 +55,7 @@
 
                     </div>
                 </div>
-                
+
 
             </nav>
         </header>
@@ -80,6 +76,7 @@
                             <a href="{{ asset('products') }}">Shop</a>
                             <a href="sizechart.html">Size Chart</a>
                             <a href="contact.html">Contact</a>
+                            <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
 
 
                             <div class="dropdown">

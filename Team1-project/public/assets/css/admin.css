@@ -58,7 +58,7 @@ body {
     font-size: 36px;
 }
 
-/***************************************************************************/
+/*****************************************************************/
 #main {
     transition: margin-left .5s;
     padding: 16px;
@@ -136,10 +136,6 @@ body {
     float: left;
 }
 
-.total-sale {
-    width: 30%;
-    float: left;
-}
 
 .content-box {
     padding: 20px;
@@ -253,6 +249,8 @@ td, th {
 .admin-profile .card h3 {
     font-size: 20px;
     font-weight: 700;
+    color:#820000;
+    text-decoration: underline;
 }
 
 .admin-profile .card p {
@@ -263,7 +261,7 @@ td, th {
 .admin-profile .table th,
 .admin-profile .table td {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     color: #000;
 }
 
@@ -297,6 +295,18 @@ input[type=text] {
 .btn-save:hover {
     background-color: #e6a3a3;
 }
+
+.products-btn {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #460000;
+    color: #ffffff;
+    padding: 2px 3px 2px 3px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #CCCCCC;
+  }
 
 
 
