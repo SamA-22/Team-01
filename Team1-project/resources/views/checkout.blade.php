@@ -27,29 +27,26 @@ session_start();
 
                 <div class="inputBox">
                     <span>Full Name :</span>
-                    <input type="text" placeholder="john deo">
+                    <input type="text" name="name" placeholder="john deo">
                 </div>
                 <div class="inputBox">
                     <span>Email :</span>
-                    <input type="email" placeholder="example@example.com">
+                    <input type="email" name="email" placeholder="example@example.com">
                 </div>
                 <div class="inputBox">
                     <span>Address :</span>
-                    <input type="text" placeholder="street - locality">
+                    <input type="text" name="address" placeholder="street - locality">
                 </div>
                 <div class="inputBox">
                     <span>City :</span>
-                    <input type="text" placeholder="Birmingham">
+                    <input type="text" name="city" placeholder="Birmingham">
                 </div>
 
                 <div class="flex">
+                    
                     <div class="inputBox">
-                        <span>State :</span>
-                        <input type="text" placeholder="state">
-                    </div>
-                    <div class="inputBox">
-                        <span>zip code :</span>
-                        <input type="text" placeholder="123 456">
+                        <span>Post code :</span>
+                        <input type="text" name="post-code" placeholder="123 456">
                     </div>
                 </div>
 
@@ -65,7 +62,7 @@ session_start();
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" placeholder="mr. john deo">
+                    <input type="text"  placeholder="mr. john deo">
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
@@ -92,7 +89,7 @@ session_start();
         </div>
         <h2>Total Price: £
             <?php 
-            
+             
             echo $_SESSION['totalprice'];
             
             ?>
