@@ -40,7 +40,7 @@
                 <a href="{{ asset('') }}">Home</a>
                 <a href="{{ asset('/products') }}">Shop</a>
                 <a href="sizechart.html">Size Chart</a>
-                <a href="{{ asset('email') }}">Contact</a>
+                <a href="{{ asset('/email') }}">Contact</a>
                 <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"> </a>
 
@@ -55,8 +55,6 @@
 
                     </div>
                 </div>
-
-
             </nav>
         </header>
 
@@ -75,7 +73,7 @@
                             <a href="{{ url('') }}">Home</a>
                             <a href="{{ asset('products') }}">Shop</a>
                             <a href="sizechart.html">Size Chart</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{ asset('/email') }}">Contact</a>
                             <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
 
 
