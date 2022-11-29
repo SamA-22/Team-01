@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="image/x-icon" />
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--title of the website-->
     <title>{{ 'High Definition Clothing' }}</title>
+
+    <!--The icon/favicon  of the website-->
+    <link rel="icon" href="{{ URL::asset('/images/favicon.ico') }}" type="image/x-icon" />
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -27,15 +27,10 @@
     <script src="https://kit.fontawesome.com/3eb214850d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
-
-
-
 </head>
 
 <body>
-
-    <!--NavBar-------------------->
-    <!-- <div class="topnav">-->
+                        <!------------------NavBar-------------------->
     @guest
         <header id="main-header">
             <a > <img id="logo" src="{{ URL::asset('/images/HDCwhite.png') }}" alt="HDC-logo"
@@ -43,9 +38,9 @@
 
             <nav class="navigation">
                 <a href="{{ asset('') }}">Home</a>
-                <a href="{{ asset('products') }}">Shop</a>
+                <a href="{{ asset('/products') }}">Shop</a>
                 <a href="sizechart.html">Size Chart</a>
-                <a href="contact.html">Contact</a>
+                <a href="{{ asset('email') }}">Contact</a>
                 <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"> </a>
 
@@ -60,7 +55,7 @@
 
                     </div>
                 </div>
-                
+
 
             </nav>
         </header>
@@ -81,6 +76,7 @@
                             <a href="{{ asset('products') }}">Shop</a>
                             <a href="sizechart.html">Size Chart</a>
                             <a href="contact.html">Contact</a>
+                            <a href="{{url('showCart')}}"><i class="fas fa-shopping-cart"></i></a>
 
 
                             <div class="dropdown">

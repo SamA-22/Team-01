@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <!---------------Number of customers, tasks and orders------------------->
+    <!---------------Number of customers, Inventory and orders------------------->
     <div class="count-box">
 
         <div class="small-cards">
@@ -11,18 +11,16 @@
 
     <div class="count-box">
         <div class="small-cards">
-            <p><span>Orders</span></p>
+            <p class="statics">{{ $total }}<br /><span>Inventory</span></p>
             <i class="fa fa-shopping-bag small-cards-icon"></i>
         </div>
     </div>
 
     <div class="count-box">
         <div class="small-cards">
-            <p><span>Inventory</span></p>
+            <p><span>Orders</span></p>
             <i class="fa fa-tasks small-cards-icon"></i>
         </div>
-
-
     </div>
 
 
@@ -37,18 +35,20 @@
                 <br />
                 <table>
                     <tr>
+                        <th>Product ID</th>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>Color</th>
-                        <th>Description</th>
+                        <th>Colour</th>
                     </tr>
 
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    @foreach ($top as $top)
+                        <tr>
+                            <td>{{ $top->id }}</td>
+                            <td>{{ $top->Name }}</td>
+                            <td>{{ $top->price }}</td>
+                            <td>{{ $top->Colour }}</td>
+                        </tr>
+                    @endforeach
 
 
                 </table>
@@ -56,24 +56,5 @@
         </div>
     </div>
 
-    <!-----------------------Total Sale---------------------->
-    <div class="total-sale">
-        <div class="total-sale-box">
-            <div class="content-box">
-                <p>Total Sale</p>
-                <div class="circle-wrap">
-                    <div class="circle">
-                        <div class="mask full">
-                            <div class="fill"></div>
-                        </div>
-                        <div class="mask half">
-                            <div class="fill"></div>
-                        </div>
-                        <div class="inside-circle"> 70% </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+
 @endsection

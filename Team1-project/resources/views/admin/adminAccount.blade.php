@@ -4,7 +4,7 @@
     <div class="admin-profile">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div>
                     <div class="card">
                         <div class="card-header bg-transparent text-center">
                             <img class="profile_img" src="{{ URL::asset('/images/admin.png') }}" alt="admin dp">

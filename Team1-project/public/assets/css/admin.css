@@ -2,8 +2,8 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #ffffff;
-    overflow: hidden;
     font-family: system-ui;
+    overflow-x: scroll;
 }
 
 .clearfix {
@@ -19,7 +19,7 @@ body {
     margin-bottom: 30px;
 }
 
-#adminPage-logo{
+#adminPage-logo {
     width: 150px;
 }
 
@@ -58,7 +58,7 @@ body {
     font-size: 36px;
 }
 
-/***************************************************************************/
+/*****************************************************************/
 #main {
     transition: margin-left .5s;
     padding: 16px;
@@ -90,7 +90,7 @@ body {
 }
 
 .statics {
-    text-align:center;
+    text-align: center;
 
 }
 
@@ -136,13 +136,10 @@ body {
     float: left;
 }
 
-.total-sale {
-    width: 30%;
-    float: left;
-}
 
 .content-box {
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 .content-box p {
@@ -189,6 +186,13 @@ td, th {
     border-bottom: 1px solid #81818140;
 }
 
+.products-btn {
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+}
+
 /************************************* Dropdown button **************************************/
 .dropdown .dropbtn {
     color: #000000;
@@ -226,101 +230,11 @@ td, th {
     display: block;
 }
 
-/**********************************Sale Percentage circle************************************/
-.circle-wrap {
-    margin: 50px auto;
-    width: 150px;
-    height: 150px;
-    background: #e6e2e7;
-    border-radius: 50%;
-}
-
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.circle-wrap .circle .mask {
-    clip: rect(0px, 150px, 150px, 75px);
-}
-
-.circle-wrap .circle .mask .fill {
-    clip: rect(0px, 75px, 150px, 0px);
-    background-color: #f7403b;
-}
-
-.circle-wrap .circle .mask.full,
-.circle-wrap .circle .fill {
-    animation: fill ease-in-out 3s;
-    transform: rotate(126deg);
-}
-
-@keyframes fill {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(126deg);
-    }
-}
-
-.circle-wrap .inside-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: #fff;
-    line-height: 130px;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    position: absolute;
-    z-index: 100;
-    font-weight: 700;
-    font-size: 2em;
-}
-
-
-/*****************************Alert Message************************/
-.alert {
-    width: 70%;
-    padding: 12px 16px;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    margin-bottom: 12px;
-    font-size: 16px;
-}
-
-.alert.alert-info {
-    background-color: rgba(217, 237, 247, 1);
-    color: #24739b;
-    border-color: rgba(126, 182, 193, 1);
-}
-
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
 
 /********Profile*******************/
 .admin-profile .card {
     border-radius: 10px;
+    display: inline-block;
 }
 
 .admin-profile .card .card-header .profile_img {
@@ -335,6 +249,8 @@ td, th {
 .admin-profile .card h3 {
     font-size: 20px;
     font-weight: 700;
+    color:#820000;
+    text-decoration: underline;
 }
 
 .admin-profile .card p {
@@ -345,6 +261,54 @@ td, th {
 .admin-profile .table th,
 .admin-profile .table td {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     color: #000;
 }
+
+/**********************Add New products ******************************/
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#image {
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.btn-save {
+    background-color: #460000;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #e6a3a3;
+}
+
+.products-btn {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #460000;
+    color: #ffffff;
+    padding: 2px 3px 2px 3px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #CCCCCC;
+  }
+
+
+
+
+

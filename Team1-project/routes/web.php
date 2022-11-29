@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
-
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,32 +18,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route to the home page
 Route::get('/', function () {
     return view('index');
 });
 
 Auth::routes();
 
+//Route to user account page
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['middleware' => ['auth', 'is_Admin']], function () {
-    Route::get('/dashboard', function () {
+///////////////////////////////////////////(Admin Routes)/////////////////////////////////////////////////////////////////////
+Route::group(['middleware'=>['auth','is_Admin']],function(){
+    Route::get('/dashboard',function(){
         return view('admin.dashboard');
     });
-});
-
-//for the Admin to access the website
-Route::get('/', function () {
-    return view('index');
-});
-
-/**Route to the dashboard page */
-Route::get('/admin.dashboard', function () {
-    return view('admin.dashboard');
-});
-
-
 
 /**Route to Customers view page */
 Route::get('/admin.users', function () {
@@ -56,21 +46,36 @@ Route::get('/admin.adminAccount', function () {
     return view('admin.adminAccount');
 });
 
-Route::get('admin.users', [AdminController::class, 'viewUsers']);
+//view all website user
+Route::get('admin.users',[AdminController::class,'viewUsers']);
 
-Route::get('delete_user/{id}', [AdminController::class, 'delete_user']);
+//Delete a user
+Route::get('delete_user/{id}',[AdminController::class,'delete_user']);
 
-Route::get('/dashboard', [AdminController::class, 'show_total']);
 
-Route::get('/products', [ProductController::class, 'getIndex']);
+//View Inventory
+Route::get('viewProducts',[ProductsController::class,'viewInventory']);
 
-Route::post('/addToCart/{id}', [CartController::class, 'addToCart']);
+//Add Product
+Route::get('addProducts',[ProductsController::class,'addProducts']);
+Route::post('add-product',[ProductsController::class,'add']);
 
-Route::get('/showCart', [CartController::class, 'showCart']);
+//Edit Product
+Route::get('edit-product/{id}', [ProductsController::class, 'edit']);
+Route::put('update-product/{id}', [ProductsController::class, 'update']);
 
-Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+//Delete product
+Route::get('delete_product/{id}',[ProductsController::class,'delete']);
 
-Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+//View all orders
+Route::get('/all_orders',[ProductsController::class,'viewAllOrders']);
+
+//Display Total Inverntory
+Route::get('/dashboard',[AdminController::class,'show_total']);
+
+
+});
+//////////////////////////////////Email//////////////////////////////////////////////////////
 
 Route::get('/email', function () {
     return view('email');
@@ -80,3 +85,13 @@ Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
 
 
+////////////////////////////Shopping Cart////////////////////////////////////////////
+Route::get('/products', [ProductsController::class, 'getIndex']);
+
+Route::post('/addToCart/{id}', [CartController::class, 'addToCart']);
+
+Route::get('/showCart', [CartController::class, 'showCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
