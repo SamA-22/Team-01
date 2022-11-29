@@ -1,6 +1,10 @@
+<?php
+session_start();
+?>
 @extends('layouts.app')
 
 @section('content')
+
 
 <div style="padding:250px;" align="center">
     <table>
@@ -25,8 +29,11 @@
 
 
         <?php
+        
         $runningtotal = $price * $quantity;
         $totalprice=$totalprice + $runningtotal;
+        $_SESSION['totalprice'] = $totalprice;
+       
         ?>
     @endforeach
 
@@ -34,7 +41,7 @@
     <div>
         <h3>Total Price: {{$totalprice}}</h1>
         <br></br>
-        <a href"{{url('/checkout')}}"><button>Checkout</button></a>
+        <a href="{{ asset('/checkout') }}">Checkout</a>
     </div>
 </div>
 

@@ -95,3 +95,8 @@ Route::get('/showCart', [CartController::class, 'showCart']);
 Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
 
 Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
