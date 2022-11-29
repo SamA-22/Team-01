@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -102,4 +104,8 @@ Route::get('/sizeChart', [ProductsController::class, 'chart']);
 Route::get('/checkout', function () {
     return view('checkout');
 });
-Route::post('/orders/{id}', [OrderController::class, 'processOrder']);
+
+Route::post('/orders', [OrderController::class, 'index']);
+
+
+Route::get('/myorders/{order}', [OrderController::class, 'show']);

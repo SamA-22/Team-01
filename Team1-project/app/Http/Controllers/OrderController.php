@@ -11,9 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    public function processOrder(Request $request, $id)
+
+    public function index(Request $request)
     {
+
         $users = auth()->user();
+        $id = $users->id;
         $product = product::find($id);
         $order = new Order;
 
@@ -23,8 +26,18 @@ class OrderController extends Controller
         $order->email = $request->input('email');
         $order->address = $request->input('address');
         $order->city = $request->input('city');
-        $order->price = $_SESSION['totalprice'];
+        $order->postcode = $request->input('post-code');
+
+
         $order->save();
         return redirect('/')->with('status', "Product Added Successfully");
+    }
+
+    public function show()
+    {
+        $users = auth()->user();
+        $id = Auth::user()->id;
+        $cart = cart::where('userid', '=', $id)->get();
+        return view('cart', compact('cart'));
     }
 }
