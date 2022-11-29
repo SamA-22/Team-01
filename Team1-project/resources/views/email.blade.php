@@ -1,13 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
-<br><br>
+
     @if (session('status'))
         <div class="alert alert-success" role="alert">
             {{ session('status') }}
         </div>
     @endif
-<br><br><br><br><br><br>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

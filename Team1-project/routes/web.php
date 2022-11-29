@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductController;
@@ -95,3 +95,7 @@ Route::get('/showCart', [CartController::class, 'showCart']);
 Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
 
 Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']);
+
+
+/////////////////////////////////////////////////////////////////////
+Route::get('/sizeChart', [ProductsController::class, 'chart']);
