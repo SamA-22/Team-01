@@ -96,6 +96,8 @@ class ProductsController extends Controller
     }
 
 
-
+    public function chart(){
+        return view('sizeChart');
+    }
 
 }

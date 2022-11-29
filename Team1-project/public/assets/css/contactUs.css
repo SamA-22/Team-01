@@ -13,7 +13,6 @@
         align-items: center;
         height: 100%;
         padding: 25px;
-        background: rgba(0, 0, 0, 0.5);
         padding-top: 7%;
         }
         .leftSection, form {
@@ -36,6 +35,7 @@
         .info, .wrap-input100 {
         display: flex;
         flex-direction: column;
+
         }
         .input100, select {
         padding: 5px;
@@ -43,6 +43,7 @@
         background: transparent;
         border: none;
         border-bottom: 1px solid #eee;
+        color: #eee;
         }
         input::placeholder {
         color: #eee;
