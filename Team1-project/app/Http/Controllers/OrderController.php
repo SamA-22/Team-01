@@ -19,10 +19,12 @@ class OrderController extends Controller
 
         $order->userid = $users->id;
         $order->productid = $product->id;
-        $order->name = $request->name;
-        $order->email = $request->email;
-        $order->address = $request->address;
-        $order->city = $request->city;
+        $order->name = $request->input('name');
+        $order->email = $request->input('email');
+        $order->address = $request->input('address');
+        $order->city = $request->input('city');
         $order->price = $_SESSION['totalprice'];
+        $order->save();
+        return redirect('/')->with('status', "Product Added Successfully");
     }
 }
