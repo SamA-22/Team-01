@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 @extends('layouts.template')
 
 @section('content')

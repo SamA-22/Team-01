@@ -99,3 +99,7 @@ Route::get('/removeFromCart/{id}', [CartController::class, 'removeItemFromCart']
 
 /////////////////////////////////////////////////////////////////////
 Route::get('/sizeChart', [ProductsController::class, 'chart']);
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
