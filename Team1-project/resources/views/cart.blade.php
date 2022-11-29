@@ -33,6 +33,7 @@ session_start();
                 <?php
                 $runningtotal = $price * $quantity;
                 $totalprice = $totalprice + $runningtotal;
+                $_SESSION['totalprice'] = $totalprice;
                 ?>
             @endforeach
 
@@ -40,7 +41,7 @@ session_start();
         <div>
             <h3>Total Price: {{ $totalprice }}</h1>
                 <br></br>
-                <a href"{{ url('/checkout') }}"><button>Checkout</button></a>
+                <a href="{{ asset('/checkout') }}">Checkout</a>
         </div>
     </div>
 @endsection

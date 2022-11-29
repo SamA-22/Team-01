@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->float('city')->nullable();
             $table->string('post-code')->nullable();
-            $table->string('price')->nullable();             
+            $table->float('price')->nullable();
         });
     }
 
