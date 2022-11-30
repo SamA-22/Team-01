@@ -43,15 +43,14 @@
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button> <br /><br />
 
-                    @if (Route::has('password.request'))
-                        <a class="btn-login-links" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif
-
                     <br /><br />
                     <a class="btn-login-links" href="{{ asset('/register') }}">
                         {{ __('Not have an account yet?') }}
+                    </a>
+
+                    <br /><br />
+                    <a class="btn-login-links" href="{{ asset('/email') }}">
+                        {{ __('Contact Support') }}
                     </a>
 
                 </form>

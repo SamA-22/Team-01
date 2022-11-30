@@ -11,9 +11,10 @@
 
                     <input id="Name" name="Name" type="text" class="login__input" placeholder="Name">
 
-                    <input id="description" name="description" type="text" class="login__input" placeholder="Description">
+                    <input id="description" name="description" type="text" class="login__input"
+                        placeholder="Description">
 
-                    <input id="size" name="size" type="text" class="login__input" placeholder="Size">
+                    <input id="size" name="Size" type="text" class="login__input" placeholder="Size">
 
                     <input id="Colour" name="Colour" type="text" placeholder="Colour">
 

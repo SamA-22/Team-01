@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-
 .form {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 180px;
+    padding-top: 90px;
 }
 
 .screen {
     background: linear-gradient(90deg, #ffffff, #7d0303);
     position: relative;
-    height: 700px;
+    height: 800px;
     width: 560px;
     box-shadow: 0px 0px 24px #f6f6f6;
 }
@@ -71,7 +70,7 @@
     width: 200px;
     background: #000000;
     top: 450px;
-    right: 50px;
+    right: 30px;
     border-radius: 60px;
 }
 
