@@ -24,7 +24,8 @@
                     <input id="price" name="price" value="{{ $product->price }}" type="text" placeholder="Price">
 
                     @if ($product->imagePath)
-                        <img src="{{ asset('images') }}/{{ $product->imagePath }}" alt="Product Image" style="width:300px" />
+                        <img src="{{ asset('images') }}/{{ $product->imagePath }}" alt="Product Image"
+                            style="width:300px" />
                     @endif
 
                     <input id="image" name="imagePath" type="file">

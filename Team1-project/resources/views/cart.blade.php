@@ -24,23 +24,25 @@ session_start();
                     <th style="color: azure"><input type="number" value={{ $quantity }} min="1"
                             class="form-control" style="width: 50px; text-align:center" name="quantity"></th>
                     <th style="color: azure">{{ $price }}</th>
-                    <th style="color: azure"><img style="width: 100px; height: 100px"
-                            src="{{ asset('images') }}/{{ $cart->imagePath }}" alt=""></th>
+                    <th style="color: azure"><img style="width: 180px; height: 200px"
+                            src="{{ asset('images') }}/{{ $cart->imagePath }}" alt="product"></th>
                     <th style="color: azure"><a onclick="return confirm('Are you sure you want to remove this item?')"
-                            href="{{ url('/removeFromCart', $cart->id) }}">Remove</a></th>
+                            href="{{ url('/removeFromCart', $cart->id) }}" style="color: rgb(179, 0, 0)"><i
+                                class="fa-solid fa-trash"></i></a></th>
                 </tr>
 
                 <?php
                 $runningtotal = $price * $quantity;
                 $totalprice = $totalprice + $runningtotal;
+                $_SESSION['totalprice'] = $totalprice;
                 ?>
             @endforeach
 
         </table>
         <div>
-            <h3>Total Price: {{ $totalprice }}</h1>
+            <h3>Total Price: £{{ $totalprice }}</h1>
                 <br></br>
-                <a href"{{ url('/checkout') }}"><button>Checkout</button></a>
+                <a href="{{ asset('/checkout') }}" class="checkoutBtn">Checkout</a>
         </div>
     </div>
 @endsection

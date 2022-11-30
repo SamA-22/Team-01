@@ -4,6 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
 
@@ -68,7 +70,8 @@ Route::put('update-product/{id}', [ProductsController::class, 'update']);
 Route::get('delete_product/{id}',[ProductsController::class,'delete']);
 
 //View all orders
-Route::get('/all_orders',[ProductsController::class,'viewAllOrders']);
+Route::get('/all_orders',[AdminController::class,'viewAllOrders']);
+
 
 //Display Total Inverntory
 Route::get('/dashboard',[AdminController::class,'show_total']);
@@ -103,3 +106,25 @@ Route::get('/sizeChart', [ProductsController::class, 'chart']);
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
+///////////////////////////Terms and Conditions//////////////////////////////////////
+Route::get('/privacyNotice', function () {
+    return view('terms.privacyNotice');
+});
+
+Route::get('/refundPolicy', function () {
+    return view('terms.refundPolicy');
+});
+
+Route::get('/term&conditions', function () {
+    return view('terms.termsAndConditions');
+});
+
+
+//Route::get('/orders', function () {
+  // return view('userOrders');
+//});
+
+Route::post('/orders', [OrderController::class, 'index']);
+
+Route::get('/orders-history', [OrderController::class, 'viewOrders']);

@@ -40,13 +40,22 @@
 
         <div class="topnav">
             <a href="{{ asset('') }}">Home</a>
-            <a href="{{ asset('#about') }}">About</a>
+            <a href="{{ asset('') }}">About</a>
             <a href="{{ asset('/products') }}">Shop</a>
             <a href="{{ asset('/sizeChart') }}">Size Chart</a>
             <a href="{{ asset('/email') }}">Contact</a>
-            <a href="{{ url('showCart') }}"><i class="fas fa-shopping-cart"></i></a>
-            <a href="{{ route('login') }}">Sign In</a>
-            <a href="{{ route('register') }}">Join</a>
+            <a href="{{ url('showCart') }}" style="padding-left: 23%"><i class="fas fa-shopping-cart"></i></a>
+
+            <div class="dropdown">
+                <a class="dropbtn">
+                    <i class='fas fa-user-circle'></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ route('login') }}">Sign In</a>
+                    <a href="{{ route('register') }}">Join</a>
+
+                </div>
+            </div>
         </div>
     @else
         <!--If user is logged in-->
@@ -59,30 +68,29 @@
 
                     <div class="topnav">
                         <a href="{{ asset('') }}">Home</a>
+                        <a href="{{ asset('') }}">About</a>
                         <a href="{{ asset('/products') }}">Shop</a>
                         <a href="{{ asset('/sizeChart') }}">Size Chart</a>
                         <a href="{{ asset('/email') }}">Contact</a>
                         <a href="{{ url('showCart') }}"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="dropdown">
+                            <a class="dropbtn">{{ Auth::user()->name }}
+                                <i class='fas fa-user-circle'></i>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="{{ url('/home') }}"><i class="fa-solid fa-user"></i> My Account</a>
+                                <a href="{{ asset('/orders-history') }}"><i class="fa-solid fa-box"></i> My Orders</a>
+                                <a href="{{ asset('/dashboard') }}"><i class="fa-solid fa-people-roof"></i></i> Admin Panel</a>
 
-                    </div>
-
-                    <div class="dropdown">
-                        <button class="dropbtn">{{ Auth::user()->name }}
-                            <i class='fas fa-user-circle'></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="{{ url('/home') }}"><i class="fa-solid fa-user"></i> My Account</a>
-                            <a href="#"><i class="fa-solid fa-box"></i> My Orders</a>
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();  document.getElementById('logout-form').submit();">
-                                <i class='fas fa-power-off'></i> Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();  document.getElementById('logout-form').submit();">
+                                    <i class='fas fa-power-off'></i> Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    </nav>
-                    </header>
                 @else
                     <a href="{{ route('login') }}">Log in</a>
                     @if (Route::has('register'))
@@ -94,6 +102,7 @@
     @endguest
 
 
+    <!-------------------------Main Content------------------------------>
     <main>
         @yield('content')
     </main>
@@ -121,15 +130,11 @@
                 <p>copyright &copy; <a href="#">HighDefinitionClothing</a> </p>
                 <div class="footer-menu">
                     <ul class="f-menu">
-                        <li><a href="">Terms & Conditions</a></li>
-                        <li><a href="">Delivery</a></li>
-                        <li><a href="">Refunds & Returns</a></li>
-                        <li><a href="">Seller</a></li>
+                        <li><a href="{{ asset('/term&conditions') }}">Terms & Conditions</a></li>
+                        <li><a href="{{ asset('/refundPolicy') }}">Refunds & Returns</a></li>
                     </ul>
                 </div>
             </div>
     </footer>
-
-
 
 </html>

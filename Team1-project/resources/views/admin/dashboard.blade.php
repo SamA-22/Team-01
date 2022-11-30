@@ -18,7 +18,7 @@
 
     <div class="count-box">
         <div class="small-cards">
-            <p><span>Orders</span></p>
+            <p class="statics">{{ $order }}<br /><span>Orders</span></p>
             <i class="fa fa-tasks small-cards-icon"></i>
         </div>
     </div>
@@ -55,6 +55,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection

@@ -60,6 +60,11 @@
                             name="password_confirmation" required autocomplete="new-password">
                     </div>
 
+                    <!------Privcy Notice checkbox-------->
+                    <input type="checkbox" name="checkbox" required><span>I agree to the <a
+                            href="{{ asset('/privacyNotice') }}" style=" color: #5d0000;font">Privacy Policy for
+                            HDC</a></span>
+
                     <!----------------------------Register Button-------------------- -->
                     <button class="button login__submit" type="submit">
                         <span class="button__text"> {{ __('Register') }}</span>

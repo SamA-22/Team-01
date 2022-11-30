@@ -90,14 +90,12 @@ class ProductsController extends Controller
     }
 
 
-    //A function to view all orders
-    public function viewAllOrders(){
-        return view('admin.allOrders');
-    }
-
-
     public function chart(){
         return view('sizeChart');
     }
+
+
+
+
 
 }
