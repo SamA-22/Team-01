@@ -128,8 +128,3 @@ Route::get('/term&conditions', function () {
 Route::post('/orders', [OrderController::class, 'index']);
 
 Route::get('/orders-history', [OrderController::class, 'viewOrders']);
-
-
-
-
-
