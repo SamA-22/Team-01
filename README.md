@@ -7,7 +7,7 @@
  The aim of our project is to sell high quality clothing to our consumers through a user friendly website that is easy to navigate through the use of many features. An example of these features are: 
  
  - Navigation bar so that the website is easy manuvered.
- - Wishlist, so that users can save products that they want to buy for later
+ -Baskett, so that users can add and remove items they would like to purchase.
 
  ## What Tools We Used to Add These Features in Our Code
  
@@ -66,7 +66,8 @@ php artisan serve
 - Ruth Amponsah
 - Wisam Abdo
 - Raheeb Abdulsalam
+- Ikram Ahmed
 - Orkhan Aghayev
 - Iltija Afzal
 - Junnayd Ahmed
-- Waylyee Akinwale
+- Walyhee Akinwale
