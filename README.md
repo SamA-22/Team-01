@@ -7,7 +7,7 @@
  The aim of our project is to sell high quality clothing to our consumers through a user friendly website that is easy to navigate through the use of many features. An example of these features are: 
  
  - Navigation bar so that the website is easy manuvered.
- -Baskett, so that users can add and remove items they would like to purchase.
+ - Baskett, so that users can add and remove items they would like to purchase.
 
  ## What Tools We Used to Add These Features in Our Code
  
