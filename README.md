@@ -65,8 +65,8 @@ php artisan serve
 ## Contrabution 
 - Ruth Amponsah
 - Wisam Abdo
+- Raheeb Abdulsalam
 - Orkhan Aghayev
 - Iltija Afzal
-- Raheen Abdusalam
 - Junnayd Ahmed
 - Waylyee Akinwale

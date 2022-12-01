@@ -21,8 +21,7 @@ session_start();
                 $quantity = $cart->quantity; ?>
                 <tr style="background-color: black">
                     <th style="color: azure">{{ $cart->product_title }}</th>
-                    <th style="color: azure"><input type="number" value={{ $quantity }} min="1"
-                            class="form-control" style="width: 50px; text-align:center" name="quantity"></th>
+                    <th style="color: azure">{{ $cart->quantity }}</th>
                     <th style="color: azure">{{ $price }}</th>
                     <th style="color: azure"><img style="width: 180px; height: 200px"
                             src="{{ asset('images') }}/{{ $cart->imagePath }}" alt="product"></th>
