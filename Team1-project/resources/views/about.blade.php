@@ -50,45 +50,16 @@
     <br>
 
     <div class="abouth5" id="about">
-        <p>Check out our new collection</p>
-        <a href="{{ asset('/products') }}" class="main-btn">Shop Now <i class="fa-solid fa-basket-shopping"></i> </a>
+        <p>About Us</p>
     </div>
-
-    <section class="cards">
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <img src="images/greytee.jpg" alt="HDChoodie1" style="width:70%">
-                </div>
-                <div class="info">
-                    <h2>HDC T-shirt</h2>
-                    <h3>14.99 GBP</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="icon">
-                    <img src="images/navysweatshirt.jpg" alt="HDChoodie1" style="width:70%">
-                </div>
-                <div class="info">
-                    <h2>HDC Sweatshirt</h2>
-                    <h3>19.99 GBP</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="icon">
-                    <img src="images/pink.jpg" alt="HDChoodie1" style="width:70%">
-                </div>
-                <div class="info">
-                    <h2>HDC Hoodie</h2>
-                    <h3>24.99 GBP</h3>
-                </div>
-            </div>
-
+    <div class="card1">
+        <h5>Our Story</h5>
+        <div class="para1">
+            <p>We believe in affordable fashion for all. We aim to bring you the latest styles for less of a strain on your
+                wallet. Our mission is to deliver comfy Jumpers and T-Shirts for everyone to empower you to look and feel
+                confident. Everything we create is informed by our audience, along with influences on social media. </p>
         </div>
-    </section>
-
+    </div>
     </div>
     <br>
     <br>

@@ -35,12 +35,13 @@
     <!------------------NavBar-------------------->
     @guest
         <div class="header">
-            <img src="images/HDC.png " style="float:none;width:350px;height:140px;">
+            <a href="{{ asset('/') }}"> <img src="images/HDC.png "
+                style="float:none;width:350px;height:140px;"></a>
         </div>
 
         <div class="topnav">
             <a href="{{ asset('') }}">Home</a>
-            <a href="{{ asset('') }}">About</a>
+            <a href="{{ asset('/about') }}">About</a>
             <a href="{{ asset('/products') }}">Shop</a>
             <a href="{{ asset('/sizeChart') }}">Size Chart</a>
             <a href="{{ asset('/email') }}">Contact</a>
@@ -63,12 +64,13 @@
             <div>
                 @auth
                     <div class="header">
-                        <img src="images/HDC.png " style="float:none;width:350px;height:140px;">
+                        <a href="{{ asset('/') }}"> <img src="images/HDC.png "
+                                style="float:none;width:350px;height:140px;"></a>
                     </div>
 
                     <div class="topnav">
                         <a href="{{ asset('') }}">Home</a>
-                        <a href="{{ asset('') }}">About</a>
+                        <a href="{{ asset('/about') }}">About</a>
                         <a href="{{ asset('/products') }}">Shop</a>
                         <a href="{{ asset('/sizeChart') }}">Size Chart</a>
                         <a href="{{ asset('/email') }}">Contact</a>

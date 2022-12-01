@@ -30,6 +30,11 @@ Auth::routes();
 //Route to user account page
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Route to about page
+Route::get('/about', function () {
+    return view('about');
+ });
+
 
 ///////////////////////////////////////////(Admin Routes)/////////////////////////////////////////////////////////////////////
 Route::group(['middleware'=>['auth','is_Admin']],function(){
@@ -120,10 +125,6 @@ Route::get('/term&conditions', function () {
     return view('terms.termsAndConditions');
 });
 
-
-//Route::get('/orders', function () {
-  // return view('userOrders');
-//});
 
 Route::post('/orders', [OrderController::class, 'index']);
 
